@@ -11,4 +11,4 @@ if __name__ == '__main__':
     # Memulai thread MQTT
     start_mqtt_thread()
     
-    app.run(debug=True, host='0.0.0.0')  # Menjalankan aplikasi di mode debug
+    app.run(debug=False, host='0.0.0.0')  # Menjalankan aplikasi di mode debug

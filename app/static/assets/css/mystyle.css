@@ -1,0 +1,76 @@
+.brand-logo {
+    width: 150px; 
+    height: auto; 
+}
+
+/* CSS untuk memastikan tabel tidak menggunakan slider kiri-kanan */
+.table {
+    font-size: 12px; /* Ukuran font lebih kecil agar fit */
+    text-align: center;
+}
+th{
+    text-align: center;
+    padding: 60px;
+}
+
+th, td {
+    padding: 4px; /* Kurangi padding */
+    text-align: center;
+}
+.table-responsive {
+    overflow-x: hidden; /* Hilangkan slider horizontal */
+}
+
+.apexcharts-menu-item.exportSVG {
+    display: none;
+  }
+
+@media (max-width: 768px) {
+    .sidebar-header .brand-logo {
+        width: 150px; 
+        height: auto; 
+    }
+    .table-responsive{
+        overflow-x: auto;
+    }
+    .table {
+        font-size: 9px; /* Ukuran font lebih kecil agar fit */
+        text-align: center;
+    }
+    .table th {
+       padding: 0.2rem;
+    }
+    .table td {
+       padding: 0.2rem;
+       font-size: 6px;
+       text-align: center;
+
+    }
+    .table tr th {
+       padding: 0.2rem;
+       font-size: 6px;
+       margin: 10px;
+
+    }
+    .apexcharts-title-text{
+        font-size: 11px;
+    }
+    .apexcharts-xaxis-label{
+        font-size: 7px;
+    }
+    .apexcharts-canvas {
+        height: 100px;
+    }
+    .dataTables_wrapper.dt-bootstrap5 .dataTables_length {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .dataTables_wrapper.dt-bootstrap5 .dataTables_filter {
+        text-align: center;
+    }
+    .page-link{
+        padding: 4px !important;
+        font-size: 10px !important;
+    }
+}
+

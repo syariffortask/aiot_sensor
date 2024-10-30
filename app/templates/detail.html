@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %} Data detail {% endblock title %}
+
+{% block content %}
+			<div class="page-content">
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+          <div>
+            <h4 class="mb-3 mb-md-0">Deteksi perkendaraan</h4>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+              <!-- tanggal -->
+                <div class="d-flex align-items-center flex-wrap text-nowrap">
+                  <div class="input-group flatpickr wd-200 me-2 mb-2 mb-md-0" id="dashboardDate">
+                    <input type="date" class="form-control bg-transparent border-primary" id='tanggal' placeholder="Select date" data-input>
+                  </div>
+                  <button type="button" id='filterbtn' class="btn btn-outline-primary btn-icon-text me-2 mb-2 mb-md-0">
+                    <i class="btn-icon-prepend" data-feather="filter"></i>
+                    Filter
+                  </button>
+                  <button type="button" id='nowbtn' class="btn btn-primary btn-icon-text mb-2 mb-md-0">
+                    <i class="btn-icon-prepend" data-feather="clock"></i>
+                    Hari ini
+                  </button>
+                </div>
+              <!-- tanggal end -->
+          </div>
+        </div>
+
+        <div class="row">
+					<div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">Data Table</h6>
+                <button class="btn btn-primary" id='exportsql'>Export SQL</button>
+                <button class="btn btn-primary" id='exportcsv'>Export CSV</button>
+
+                <div class="table-responsive mt-1">
+                  <table id="dataTableExample" class="table  table-striped">
+                    <thead>
+                      <tr>
+                        <th>Sensor ID</th>
+                        <th>Object ID</th>
+                        <th>Class ID</th>
+                        <th>Zone</th>
+                        <th>Speed(KM/h)</th>
+                        <th>Length(M)</th>
+                        <th>Time</th>
+                      </tr>
+                    </thead>
+                    <tbody id='dataTableBody'>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+					</div>
+				</div>
+
+
+			</div>
+{% endblock content %}
+
+{% block customjs %}
+
+<script src="{{ url_for('static',filename='assets/vendors/datatables.net/jquery.dataTables.js')}}"></script>
+<script src="{{ url_for('static',filename='assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js')}}"></script>
+<script src="{{url_for('static',filename='assets/js/mydetail.js')}}"></script>
+
+{% endblock customjs %}
